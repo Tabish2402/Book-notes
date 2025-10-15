@@ -1,0 +1,14 @@
+# Ignore all log files
+*.log
+
+# Ignore the build directory
+/build/
+
+# Ignore a specific temporary file
+temp_data.txt
+
+# Ignore Node.js modules
+node_modules/
+
+# Ignore operating system specific files
+.DS_Store
