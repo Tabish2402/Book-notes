@@ -1,0 +1,101 @@
+/* Body and overall page */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #008080; /* Teal background */
+  margin: 0;
+  padding: 20px;
+}
+
+/* Page title */
+h1 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: rgb(133, 120, 120);
+}
+
+/* Add Book button */
+.sort-buttons {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.sort-buttons a {
+  margin: 0 10px;
+  text-decoration: none;
+  color: #e7c6c6;
+  font-weight: bold;
+  background-color: #496070; /* button bg */
+  padding: 8px 12px;
+  border-radius: 5px;
+}
+
+.sort-buttons a:hover {
+  background-color: #005fa3;
+  color: #d7bbbb;
+}
+
+/* Book list cards container */
+.book-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+
+/* Individual book card */
+.book-card {
+  background-color: #f5deb3; /* light brown */
+  width: 200px;
+  border-radius: 10px;
+  padding: 15px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+  text-align: center;
+  transition: transform 0.2s;
+}
+
+.book-card:hover {
+  transform: scale(1.05);
+}
+
+/* Book cover image */
+.book-card img {
+  width: 100px;
+  height: 150px;
+  object-fit: cover;
+  margin-bottom: 10px;
+  border-radius: 5px;
+}
+
+/* Book title and text */
+.book-card h3 {
+  margin: 10px 0 5px 0;
+  font-size: 1.1em;
+}
+
+.book-card p {
+  font-size: 0.9em;
+  margin: 5px 0;
+}
+
+/* Rating stars */
+.rating {
+  margin: 5px 0;
+  color: #f5a623; /* gold stars */
+}
+
+/* Edit & Delete buttons */
+.card-buttons {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10px;
+}
+
+.card-buttons form button,
+.card-buttons a {
+  background-color: #496070; /* dark gray/blue */
+  color: rgb(179, 132, 132);
+  border: none;
+  padding: 5px 8px;
+  border-radius: 5px;
+  text-decoration: none;
+  cursor: pointer;

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>My Book Tracker</title>
+  <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+  <h1>My Book Tracker</h1>
+
+  <div class="sort-buttons">
+  <a href="/add">Add New Book</a>
+</div>
+<body style="background-color: #f9f9f9;"></body>
+
+  <div class="book-list">
+    <% books.forEach(book => { %>
+      <div class="book-card">
+        <img src="<%= book.cover_url %>" alt="Cover of <%= book.title %>">
+        <h3><%= book.title %></h3>
+        <p><strong>Author:</strong> <%= book.author %></p>
+        <p><strong>Date Read:</strong> <%= book.date_read.toISOString().split('T')[0] %></p>
+        <div class="rating">
+          <% for(let i = 0; i < book.rating; i++){ %>
+            ⭐
+          <% } %>
+        </div>
+        <div class="card-buttons">
+          <a href="/edit/<%= book.id %>">Edit</a>
+          <form action="/delete/<%= book.id %>" method="POST">
+            <button type="submit">Delete</button>
+          </form>
+        </div>
+      </div>
+    <% }) %>
+  </div>
+</body>
+</html>
